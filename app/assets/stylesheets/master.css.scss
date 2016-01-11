@@ -1,0 +1,51 @@
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  padding:20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'helvetica neue', helvetica;
+  	font-weight: 100;
+  	margin:0;
+    padding:0;
+}
+
+body {
+	background: url('/assets/wood.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'helvetica neue', helvetica;
+  	font-weight: 300;
+}
+
+.navbar.navbar-inverse {
+  background:url('/assets/stressed_linen.png');
+  border-radius:0;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-inverse .navbar-brand{
+  font-family: 'salarymanregular';
+  color: #FFFFFF;
+  font-size: 26px;
+}
+.navbar-inverse .navbar-brand:hover{
+  color: #ABABAB
+
+}
+.navbar-inverse .navbar-text {
+	  font-family: 'salarymanregular';
+  color: #FFFFFF;
+  font-size: 22px;
+  padding-top: 17px;
+  margin: -5px;
+
+}
