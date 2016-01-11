@@ -4,13 +4,13 @@
 		<i>  <%= place.address %>      </i><br /><br />
 		<p>  <%= place.description %>  </p> <br />
 	</div>
-
+<% end %>
 		
-	<div class="text-center"
-		<ul class="pagination col-xs-10 col-xs-offset-2">
-				<%= will_paginate @places, renderer: BootstrapPagination::Rails %>
+	<div class="text-center">
+		<ul class="pagination">
+			<%= will_paginate @places, renderer: BootstrapPagination::Rails %>
 		</ul>		    
 	</div>
 
-<% end %>
+
 
