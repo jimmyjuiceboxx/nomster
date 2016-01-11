@@ -43,6 +43,7 @@ body {
 }
 .navbar-inverse .navbar-text {
 	  font-family: 'salarymanregular';
+	  text-decoration: none;
   color: #FFFFFF;
   font-size: 22px;
   padding-top: 17px;
@@ -53,6 +54,15 @@ body {
 	color:#23527c;
 }
 
+.navbar-brand {
+	max-width:100px; 
+	margin-top:-6px;
+
+}
+
+.navbar-nav{
+	padding-left: 30px
+}
 .pagination > li > a{
 	color: #FFFFFF;
 background:url('/assets/stressed_linen.png');
