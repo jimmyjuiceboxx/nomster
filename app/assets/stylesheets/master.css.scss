@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-	background: url('/assets/wood.jpg') no-repeat center center fixed;
+	background: url('/assets/beer.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -48,4 +48,34 @@ body {
   padding-top: 17px;
   margin: -5px;
 
+}
+.navbar-inverse .navbar-text:hover{
+	color:#23527c;
+}
+
+.pagination > li > a{
+	color: #FFFFFF;
+background:url('/assets/stressed_linen.png');
+border:#000000;
+}
+.pagination > li > a:hover{
+	color:#23527c
+}
+
+.pagination > .disabled > span:hover{
+	background-color:#000000;
+}
+.pagination > .active > span{
+	background:url('/assets/stressed_linen.png');
+	border:#000000;
+}
+
+.pagination > .active > span:hover{
+	background-color:#000000;
+
+}
+
+.pagination > .disabled > span {
+	background:url('/assets/stressed_linen.png');
+	border:#000000;
 }

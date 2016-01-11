@@ -5,5 +5,12 @@
 		<p>  <%= place.description %>  </p> <br />
 	</div>
 
+		
+	<div class="text-center"
+		<ul class="pagination col-xs-10 col-xs-offset-2">
+				<%= will_paginate @places, renderer: BootstrapPagination::Rails %>
+		</ul>		    
+	</div>
+
 <% end %>
 
