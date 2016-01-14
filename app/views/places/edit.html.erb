@@ -1,0 +1,17 @@
+<div class="detail-box col-xs-12 col-sm-8 col-sm-offset-2">
+	<div class="panel panel-default">
+		<div class="panel-heading">		
+		<h1> Edit Your Place </h1>
+		</div>
+
+		<div class="panel-body">
+		<%= simple_form_for @place do |f| %>
+			<%= f.input :name %>
+			<%= f.input :address %>
+			<%= f.input :description %>
+			<br />
+			<%= f.submit 'Update', class: 'btn btn-primary' %>
+		<% end %>
+		</div>
+	</div>	
+</div>	
