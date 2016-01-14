@@ -11,11 +11,12 @@ body {
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-  	background-size: 100% cover;
+  	background-size: 100% auto;
+  	background-position:center;
 	font-family: 'helvetica neue', helvetica;
   	font-weight: 300;
-  	overflow:hidden;
-}
+  }	
+
 
 .navbar.navbar-inverse {
   background:url('/assets/stressed_linen.png');
