@@ -22,7 +22,7 @@
      
       <%= link_to image_tag("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/beer.png"), root_path, class: 'navbar-brand' %>
      
-      <%= link_to 'Sud Spots', root_path, class: 'navbar-text' %> 
+      <%= link_to 'Sud Finder', root_path, class: 'navbar-text' %> 
       
     </div>
 
@@ -38,7 +38,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+         <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+        
+        </li>
         <% else %>
         <li><%= link_to 'Sign In', new_user_session_path %></li>
         <% end %>

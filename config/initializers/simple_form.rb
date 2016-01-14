@@ -164,4 +164,5 @@ SimpleForm.setup do |config|
   # config.i18n_scope = 'simple_form'
 
   config.input_class = "form-control"
+
 end
