@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-	before_action :authenticate_user!, only: [:new, :create]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
         #  -----INDEX-----------
         #  @var =  model name .all unless using .paginate 
@@ -20,8 +20,13 @@ class PlacesController < ApplicationController
 		#  @var = model name . create unless using devise
 		#  divise change to current_user.places.create(place_params)
 	def create
-		current_user.places.create(place_params)
-		redirect_to root_path
+		@place = current_user.places.create(place_params)
+		if @place.valid?
+			redirect_to root_path
+		else 
+			render :new, status: :unprocessable_entity
+		end
+		
 	end
 
 		#  -----SHOW------------
@@ -35,6 +40,10 @@ class PlacesController < ApplicationController
 		#  Find the right place and include (params[:id])
 	def edit
 		@place = Place.find(params[:id])
+
+		if @place.user != current_user 
+			return render text: 'Error: Access prohibited!', status: :forbidden 
+		end
 	end
 
 
@@ -44,8 +53,15 @@ class PlacesController < ApplicationController
 		#  Redirect User to root
 	def update
 		@place = Place.find(params[:id])
+		if @place.user != current_user 
+			return render text: 'Error: Access prohibited!', status: :forbidden 
+		end
 		@place.update_attributes(place_params)
-		redirect_to root_path
+		if @place.valid?
+           redirect_to root_path
+        else
+           render :edit, status: :unprocessable_entity
+        end
 	end	
 
 
@@ -55,8 +71,12 @@ class PlacesController < ApplicationController
 	    # Redirect User to root
 	def destroy
 		@place = Place.find(params[:id])
+		if @place.user != current_user 
+			return render text: 'Error: Access prohibited!', status: :forbidden 
+		end
 		@place.destroy
 		redirect_to root_path
+		
 	end
 
 	private
