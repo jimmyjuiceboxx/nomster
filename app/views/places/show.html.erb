@@ -18,7 +18,7 @@
     
   <% if @place.latitude.present? && @place.longitude.present? %>  
     <script>
-
+var marker;
 function initMap() {
   
   var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
@@ -28,13 +28,22 @@ function initMap() {
     center: myLatLng
   });
 
-  var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-
-  var marker = new google.maps.Marker({
+  
+    marker = new google.maps.Marker({
     position: myLatLng,
+    draggable: false,
+    animation: google.maps.Animation.DROP,
     map: map,
     title: 'Hello World!'
   });
+  marker.addListener('click', toggleBounce);
+}
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
 }
 
     </script>
