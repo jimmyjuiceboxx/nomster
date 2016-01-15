@@ -8,6 +8,44 @@
 			<i><%= @place.address %></i>
 			<br/><br/>
 			<p><%= @place.description %></p>
+
+			<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    
+  <% if @place.latitude.present? && @place.longitude.present? %>  
+    <script>
+
+function initMap() {
+  
+  var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: myLatLng
+  });
+
+  var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
+
+    </script>
+    <div id="map"></div>
+    <% end %>
+
+    <br />
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+  </body>
+</html>
 				<div class="pull-right">
 					<% if current_user && current_user == @place.user %>
 					<%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
