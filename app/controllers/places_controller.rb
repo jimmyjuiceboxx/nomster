@@ -33,6 +33,7 @@ class PlacesController < ApplicationController
 		#  Find the right place and include (params[:id])
 	def show
 		@place = Place.find(params[:id])
+		@comment = Comment.new
 	end
 
 
