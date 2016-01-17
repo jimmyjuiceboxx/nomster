@@ -46,6 +46,10 @@ gem 'geocoder'
 # Figaro 
 gem 'figaro', '>= 1.0.0'
 
+gem 'foreman'
+
+gem 'puma'
+
 # gem 'turbolinks'
 
 group :doc do
