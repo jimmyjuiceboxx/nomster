@@ -52,8 +52,6 @@ GEM
     execjs (2.6.0)
     figaro (1.1.1)
       thor (~> 0.14)
-    foreman (0.78.0)
-      thor (~> 0.19.1)
     geocoder (1.2.14)
     hike (1.2.3)
     i18n (0.7.0)
@@ -73,7 +71,6 @@ GEM
     orm_adapter (0.5.0)
     pg (0.18.4)
     polyglot (0.3.5)
-    puma (2.15.3)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -143,12 +140,10 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (>= 3.2.4)
   figaro (>= 1.0.0)
-  foreman
   geocoder
   jbuilder (~> 1.2)
   jquery-rails
   pg
-  puma
   rails (= 4.0.1)
   sass-rails
   sdoc
