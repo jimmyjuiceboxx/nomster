@@ -167,22 +167,38 @@ padding-bottom:7px;
 }
 
 .comment_img{
-	margin-top: 30px;
+	margin-top: 50px;
 	margin-left:160px;
 	font-size:50px
 }
 #map {
-  height: 300px;
+  height: 200px;
+  margin-top:30px;
+}
+.img_responsive{
+	max-width:400px;
+}
+
+
+.caption{
+	padding:10px;
+	margin-left:0px;
+	margin-top:10px;
+	margin-bottom:30px;
+	background: #f5f5f5;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 .add_a_comment{
 	margin-top:15px;
 }
+
 blockquote {
   background: #f5f5f5;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
+  margin: 1em 5px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 blockquote:before {
   color: #ccc;
@@ -194,4 +210,27 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+.index_comment{
+	margin-top:10px;
+	margin-left:0px;
+}
+.pic-box{
+	margin: center auto;
+	min-height:215px;
+	min-width:338px;
+	max-width:602px;
+	background: #f5f5f5;
+	padding-top:15px;
+	padding-bottom:15px;
+	max-height:450px;
+	inline-block:center;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.description{
+	padding-top:15px;
+	padding-left: 15px;
+			
 }

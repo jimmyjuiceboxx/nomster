@@ -34,19 +34,23 @@ gem 'sprockets', '2.11.0'
 # Simple form 
 gem 'simple_form'
 
-# pagination 
+# pagination
 gem 'will_paginate-bootstrap'
 
 # User Authentication Gem
 gem 'devise', '>=3.2.4'
 
-# Geocoder
+# Geocoder: for map api 
 gem 'geocoder'
 
-# Figaro 
+# Figaro: keeps passcodes hidden
 gem 'figaro', '>= 1.0.0'
 
+# Carrier wave: posting and saving pictures
+gem 'carrierwave'
 
+# Fog: carrier wave helper
+gem "fog", "~> 1.3.1"
 
 # gem 'turbolinks'
 

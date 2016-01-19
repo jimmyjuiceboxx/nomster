@@ -1,39 +1,56 @@
 	
 <!--Places panels -->
 <% @places.each do |place| %>
-  <div class="detail-box col-xs-12 col-sm-10 col-sm-offset-1" >
+    <div class="detail-box col-xs-12 col-sm-10 col-sm-offset-1" >
 		<div class="panel panel-default">
 
 			<div class="panel-heading">
+
 				<h1><%= link_to place.name, place_path(place) %></h1>
 			</div>	
 
 
-				<div class="panel-body ">		
-					<i><%= place.address %></i><br /><br />
-					<p><%= place.description %></p> <br />
-					  <% if place.user.present? %>
-      			<small><%= place.user.email %></small>
-    				<% end %>
-    				<% if place.comments.present? %>
-					  <div class="col-xs-12 col-sm-6">
-					    <blockquote>
-					      <% if place.comments.last.humanized_rating.present? %>
-					        <b><%= place.comments.last.humanized_rating %></b> -
-					      <% end %>
-					      <%= place.comments.last.message %>
-					      <small><%= place.comments.last.user.email %></small>
-					    </blockquote>
-					  </div>
-					<% end %>
-    			
-					
+				<div class="panel-body">
+				  <div class="address col-xs-12 col-sm-4">
+						<h4> Address:</h4>		
+						<p><%= place.address %></p>
+				  </div>
+				  		<div class="clear"><br /></div>
+						<div class="pic-box col-xs-12 col-sm-8 col-sm-offset-2">
+						<% if place.photos.last.present? && place.photos.last.picture.present? %>
+						<%= image_tag place.photos.last.picture, :class => 'img-responsive', :style => "max-height:350px" %>
+						<% end %>
+						</div>
+						
 
+						<div class="clear"</div>
+							<br />
+							<div class="description col-xs-12 col-sm-6">
+							<h4>Description:</h4>
+							<p><%= place.description %></p> <br />
+							</div>
+						 
 
+		    				<% if place.comments.present? %>
+							  <div class="col-xs-12">
+							  	<div class="comment_box">
+							  	<h2 class= "index_comment"> Last Comment:</h2>
+							  </div>
+
+							    <blockquote>
+							      <% if place.comments.last.humanized_rating.present? %>
+							        <b><%= place.comments.last.humanized_rating %></b> -
+							      <% end %>
+							      <%= place.comments.last.message %>
+							      <small><%= place.comments.last.user.email %></small>
+							    </blockquote>
+							  </div>
+							<% end %>
+				  	
 				</div>	
 
-	  </div>	
-  </div>
+	    </div>	
+    </div>
 <% end %>	 
 
 
